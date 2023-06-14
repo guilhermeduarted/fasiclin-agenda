@@ -6,6 +6,7 @@ function Agendamento() {
   const [procedimentoSelecionado, setProcedimentoSelecionado] = useState(null);
   const [dataSelecionada, setDataSelecionada] = useState(null);
   const [medicosDisponiveis, setMedicosDisponiveis] = useState([]);
+  const [especialidade, setEspecialidade] = useState()
 
   const especialistas = {
     NUTRIÇÃO: ["Dr. Fulano", "Dr. Beltrano","Dr.lololo"],
@@ -71,6 +72,3 @@ function Agendamento() {
 }
 
 export default Agendamento;
-
-
-

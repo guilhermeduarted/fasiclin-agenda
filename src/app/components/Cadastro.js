@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import axios from "axios";
 import "./style.css"
 
 const maskCPF = (value) => {
@@ -23,55 +24,56 @@ const maskOnlyLetters = (value) => {
 };
 
 const App = () => {
-  const [cpf, setCPF] = useState("");
-  const [phone, setPhone] = useState("");
-  const [name, setName] = useState("");
+  const [formData, setFormData] = useState({
+    nomeCliente: "",
+    cpfCliente: "",
+    telefoneCliente: ""
+  })
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
+  const handleChange = (event) => {
+    const { name, value } = event.target
+    setFormData((prevFormData) => ({
+      ...prevFormData,
+      [name]: value
+    }))
+  }
 
-    const data = { cpf, phone, name };
+  const handleSubmit = (event) => {
+    event.preventDefault()
 
-    // Enviar os dados para o backend-dis meus cupadre
-    fetch("/api/save-data", {
-      method: "POST",
-      body: JSON.stringify(data),
-      headers: {
-        "Content-Type": "application/json",
-      },
-    })
-      .then((response) => response.json())
-      .then((data) => {
-        console.log("Dados salvos com sucesso: ", data);
+    axios.post("http://localhost:8080/agenda/inserir/cliente", formData)
+      .then(response => {
+        console.log(response.data)
+      }).catch(error => {
+        console.error(error)
       })
-      .catch((error) => {
-        console.error("Erro ao salvar os dados: ", error);
-      });
-  };
+  }
 
   return (
     <div className="bloco">
         <form className="form" onSubmit={handleSubmit}>
 
-            <h1 className="login">Cadastro</h1>
+            <h1 className="login">Cadastro do Paciente</h1>
 
 
             <label>
-            <input 
+            <input
+                name="nome"
                 className="input"
-                value={name}
-                onChange={(e) => setName(maskOnlyLetters(e.target.value))}
-                placeholder="Seu nome"
+                value={formData.nomeCliente}
+                onChange={handleChange}
+                placeholder="Nome do paciente"
             />
             </label>
             <br/>
 
             <label>
             <input
+                name="cpf"
                 className="input"
-                value={cpf}
-                onChange={(e) => setCPF(maskCPF(e.target.value))}
-                placeholder="Seu CPF"
+                value={formData.cpfCliente}
+                onChange={handleChange}
+                placeholder="CPF do paciente"
             />
             </label>
 
@@ -79,10 +81,11 @@ const App = () => {
 
             <label>
             <input
+                name="telefone"
                 className="input"
-                value={phone}
-                onChange={(e) => setPhone(maskPhone(e.target.value))}
-                placeholder="Seu telefone"
+                value={formData.telefoneCliente}
+                onChange={handleChange}
+                placeholder="Telefone do paciente"
             />
             </label>
             
@@ -94,6 +97,3 @@ const App = () => {
 };
 
 export default App;
-
-
-
