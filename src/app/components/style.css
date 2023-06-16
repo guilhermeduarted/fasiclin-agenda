@@ -12,6 +12,22 @@
     justify-content: center;
     padding: 15px;
     background-color: #fcfcfc;
+    flex-wrap:wrap-reverse,
+    
+    
+}
+
+.blocoAGENDA{
+    width: auto;
+    min-height:auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    padding: 50px;
+    display: grid;
+    flex-wrap:wrap-reverse,
+
 }
 
 .form{
@@ -21,6 +37,25 @@
     overflow: hidden;
     padding: 77px 55px 33px 55px;
     box-shadow: 0 5px 10px 0px rgba(0, 0, 0, 0.2);
+   
+    
+}
+
+.formAGENDA{
+    
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 8px;
+    grid-row-gap: 8px;
+    width: 400px;
+    background-color: #dbd9d9;
+    border-radius: 10px;
+    overflow: hidden;
+    padding: 100px 100px 100px 100px;
+    box-shadow: 0 5px 10px 0px rgba(0, 0, 0, 0.2);
+        
+     
+     
     
 }
 
@@ -39,12 +74,14 @@
 }
 
 .login{
+    
     display:flexbox;
     font-size: 30px;
     color: rgb(0, 4, 2);
     line-height: 1.2;
     text-align:center;
-    justify-content: center
+    justify-content: center;
+    margin: 20px;
 
 }
 
@@ -69,20 +106,52 @@
     width: 100%;
     height: 50px;
     background-color: #495453;
+    
 }
 
 .botao-age{
-    font-size: 15px;
-    border: none;
-    border-radius: 10px;
-    color: #fff;
-    line-height: 1.2;
-    text-transform: uppercase;
+    padding: 20px;
+    font-family: helvetica;
+    display: grid;
+    border-color: #20262e;
+    border-radius: 3px;
+    font-size: 14px;
+    background-color: #04943C;
+}
+.menu{
+   
+
+
     display: flex;
-    justify-content: center;
     align-items: center;
-    width: 100%;
-    height: 50px;
-    background-color: #39c84c;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #04943C;
+    color:#04943C;
+   
+  
+  
+}
+
+.fasipimage{
+    width: 150px;
+
 
 }
+.a{
+ 
+
+
+  
+     a:hover {
+         color: #000000;
+     }
+     
+    
+     a:active {
+         color: blue;
+     }
+
+}
+
+
