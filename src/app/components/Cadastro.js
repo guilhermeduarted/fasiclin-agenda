@@ -30,6 +30,18 @@ const Cadastro = () => {
   };
 
   return (
+
+    <div>
+
+          <nav>
+              <ul class="menu">
+                <li><img className="fasipimage" src="https://grupofasipe.com.br/img/grupo-fasipe.png"></img></li>
+                <li><a className="a" href="#">AGENDA POR PROFISSIONAL</a></li>
+                <li><a className="a" href="./components/Procedimento">PESQUISA POR CLIENTE</a></li>
+                <li><a className="a" href="#">HISTORICO DE AGENDA</a></li>
+                
+              </ul>
+        </nav>
     <div className="bloco">
       <form className="form" onSubmit={handleSubmit}>
         <h1 className="login">Cadastro do Paciente</h1>
@@ -69,8 +81,13 @@ const Cadastro = () => {
 
         <br />
         <button className="botao" type="submit">Cadastrar</button>
+
+        
       </form>
+
     </div>
+  </div>
+    
   );
 };
 

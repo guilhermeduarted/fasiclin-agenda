@@ -8,10 +8,6 @@ import Procedimentos from "./Procedimentos";
 
 
 
-
-
-
-
 const Routers = () => {
     return(
         <Routes>

@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import Calendar from 'react-calendar';
 import axios from "axios";
 import Procedimentos from "./Procedimentos";
+
 import "./style.css"
 
 function Agendamento() {
@@ -43,18 +44,17 @@ function Agendamento() {
 
   <div className="sobrebar">
 
-<nav>
-        <ul class="menu">
-          <li><img className="fasipimage" src="https://grupofasipe.com.br/img/grupo-fasipe.png"></img></li>
-          <li><a href="#">AGENDA POR PROFISSIONAL</a></li>
-          <li><a href="./components/Procedimento">PESQUISA POR CLIENTE</a></li>
-          <li><a href="#">HISTORICO DE AGENDA</a></li>
-          
-        </ul>
+      <nav>
+              <ul class="menu">
+                <li><img className="fasipimage" src="https://grupofasipe.com.br/img/grupo-fasipe.png"></img></li>
+                <li><a className="a" href="#">AGENDA POR PROFISSIONAL</a></li>
+                <li><a className="a" href="./components/Procedimento">PESQUISA POR CLIENTE</a></li>
+                <li><a className="a" href="#">HISTORICO DE AGENDA</a></li>
+                
+              </ul>
       </nav>
       
     <div className="blocoAGENDA">
-     
       <div className="formAGENDA">
    
       
@@ -79,7 +79,7 @@ function Agendamento() {
        
       </div>
 
-      [{procedimentoSelecionado && (
+      {procedimentoSelecionado && (
         <div>
           <h3>Selecione uma data:</h3>
           <Calendar onChange={handleDataSelecionada} value={dataSelecionada} />
@@ -98,7 +98,7 @@ function Agendamento() {
             ))}
           </ul>
         </div>
-      )}]
+      )}
     </div>
   
   

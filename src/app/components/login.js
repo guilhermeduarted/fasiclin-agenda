@@ -14,7 +14,7 @@ const LoginForm = () => {
 
     const data = { senha, name };
 
-    // Enviar os dados para o backend-dis meus cupadre
+    
     fetch("/api/save-data", {
       method: "POST",
       body: JSON.stringify(data),
@@ -32,20 +32,29 @@ const LoginForm = () => {
   };
 
   const handleForgotPassword = () => {
-    // Lógica para lidar com o link "Esqueci minha senha"
-    // redirecionamento para a página de recuperação de senha, por exemplo.
+    
   };
 
   const handleSignup = () => {
-    // Lógica para lidar com o link "Não tenho cadastro"
-    // redirecionamento para a página de cadastro, por exemplo.
+    
   };
 
   return (
-    <div className="bloco">
-      <form className="form" onSubmit={handleSubmit}>
-        <h1 className="login">Cadastro</h1>
 
+
+    
+    <div className="blocologin">
+
+<nav className="menulogin">
+        <ul>
+          <text>LOGIN</text>
+        </ul>
+      </nav>
+
+
+   
+      <form className="formalogin" onSubmit={handleSubmit}>
+   
         <label>
           <input
             className="input"
@@ -77,9 +86,6 @@ const LoginForm = () => {
         </a>
         
         <br />
-        <a href="#" onClick={handleSignup}>
-          Não tenho cadastro
-        </a>
       </div>
       </form>
 

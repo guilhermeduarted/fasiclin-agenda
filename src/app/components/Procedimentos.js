@@ -22,8 +22,24 @@ const Procedimentos = () => {
   console.log(data)
 
   return(
-    <table>
-      <thead>
+
+    
+
+  
+    
+    <table className="blocoprocedimento">
+
+      <div className="sobrebar">
+        <nav>
+                <ul class="menu">
+                  <li><img className="fasipimage" src="https://grupofasipe.com.br/img/grupo-fasipe.png"></img></li>
+                  <li><a className="a" href="#">AGENDA POR PROFISSIONAL</a></li>
+                  <li><a className="a" href="./components/Procedimento">PESQUISA POR CLIENTE</a></li>
+                  <li><a className="a" href="#">HISTORICO DE AGENDA</a></li>
+                </ul>
+        </nav>
+    </div>
+      <thead className="procedimento">
         <tr>
           <th>ID</th>
           <th>Procedimento</th>
@@ -46,5 +62,7 @@ const Procedimentos = () => {
     </table>
   )
 }
+
+
 
 export default Procedimentos

@@ -5,7 +5,7 @@
 }
 .bloco{
     width: 100%;
-    min-height: 100vh;
+    min-height: 555px;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
@@ -15,6 +15,22 @@
     flex-wrap:wrap-reverse,
     
     
+}
+.blococadastro{
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+    background-color: #fcfcfc;
+    flex-wrap:wrap-reverse;
+  
+    
+    
+    
+
 }
 
 .blocoAGENDA{
@@ -124,7 +140,7 @@
 
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-evenly;
     padding: 20px;
     background-color: #04943C;
     color:#04943C;
@@ -138,20 +154,87 @@
 
 
 }
+
+
 .a{
+ color: rgb(252, 255, 253);
+ text-decoration:none;
+ background-color:#04943C;
+ 
  
 
-
-  
-     a:hover {
-         color: #000000;
-     }
-     
+}
+a:link, a:visited, a:active {
+	text-decoration: none;
     
-     a:active {
-         color: blue;
-     }
+	}
+a:hover {text-decoration: 0;
+	color:#0dc92c;
+	font-size:150%;
+	}
+
+.blocologin{
+    width: 100%;
+    min-height: 555px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+    background-color: #fcfcfc;
+    flex-wrap:wrap-reverse;
+    
+    
+}
+.formalogin{
+    width: 390px;
+    background-color: #dbd9d9;
+    border-radius: 5px;
+    overflow: hidden;
+    padding: 65px 55px 33px 55px;
+    
+
 
 }
+
+.menulogin{
+    
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 20px;
+    background-color: #AFAFAF;
+    color:#000000;
+    width: 460px;
+    border-radius: 1px;
+    
+   
+  
+
+}
+.procedimento{
+    width: 100%;
+    min-height: 600px;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+    padding: 10px;
+}
+
+.blocoprocedimento{
+
+    width: 100%;
+    min-height: 555px;
+    
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    padding: -55px;
+    background-color: #fcfcfc;
+    flex-wrap:wrap-reverse,
+
+}
+
 
 
